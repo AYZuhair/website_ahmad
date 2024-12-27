@@ -1,0 +1,9 @@
+/* src/styles/components/skills.css */
+.skill-card {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-5px);
+  }
+  

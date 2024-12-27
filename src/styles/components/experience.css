@@ -1,0 +1,9 @@
+/* src/styles/components/experience.css */
+.experience-card {
+    border-left: 4px solid transparent;
+    transition: border-color 0.2s ease-in-out;
+  }
+  
+  .experience-card:hover {
+    border-color: var(--primary);
+  }

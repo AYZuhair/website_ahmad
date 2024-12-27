@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #4caf50; /* Soft green for main accents */
+  --secondary: #ff9800; /* Vibrant orange for secondary accents */
+  --background: #f9f9f9; /* Light grayish white for background */
+  --foreground: #1a1a1a; /* Dark gray for text */
+  --muted: #6b7280; /* Muted gray for secondary text */
+  --primary-rgb: 76, 175, 80;
+  --secondary-rgb: 255, 152, 0;
+}
+
+/* Base styles */
+body {
+  @apply antialiased text-gray-800 bg-gray-50;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold tracking-tight;
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Component styles */
+.section {
+  @apply py-16 px-4 md:px-6;
+}
+
+.container {
+  @apply max-w-7xl mx-auto;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl;
+}
+
+/* Button styles */
+.btn {
+  @apply px-4 py-2 rounded-md font-medium transition-colors duration-200;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
+}
+
+.btn-outline {
+  @apply border-2 border-blue-600 text-blue-600 hover:bg-blue-50;
+}
+
+/* Progress bar animation */
+.progress-bar {
+  @apply relative h-2.5 bg-gray-200 rounded-full overflow-hidden;
+}
+
+.progress-bar-fill {
+  @apply absolute top-0 left-0 h-full bg-blue-600 rounded-full transition-all duration-500;
+}
+
+/* Hover effects */
+.hover-lift {
+  @apply transition-transform duration-300 hover:-translate-y-1;
+}
+
+.hover-glow {
+  @apply transition-shadow duration-300 hover:shadow-lg;
+}
+
+/* Grid layouts */
+.grid-auto-fit {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+/* Link styles */
+a {
+  @apply text-blue-600 hover:text-blue-800 transition-colors duration-200;
+}
+
+/* List styles */
+.list-item {
+  @apply flex items-center space-x-2 py-1;
+}
+
+/* Icon styles */
+.icon {
+  @apply w-5 h-5 text-gray-600;
+}
+
+.icon-primary {
+  @apply text-blue-600;
+}
+
+/* Responsive text */
+@screen sm {
+  .text-responsive {
+    @apply text-sm;
+  }
+}
+
+@screen md {
+  .text-responsive {
+    @apply text-base;
+  }
+}
+
+@screen lg {
+  .text-responsive {
+    @apply text-lg;
+  }
+}
+
+/* Focus styles */
+*:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-opacity-50;
+}
+
+/* Selection styles */
+::selection {
+  @apply bg-blue-500 text-white;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #60a5fa;
+    --secondary: #818cf8;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none;
+  }
+  
+  body {
+    @apply bg-white text-black;
+  }
+}
+
+/* Accessibility */
+.sr-only {
+  @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+}
+
+/* Loading states */
+.loading {
+  @apply animate-pulse bg-gray-200;
+}
+
+/* Error states */
+.error {
+  @apply text-red-600 border-red-600;
+}
+
+/* Success states */
+.success {
+  @apply text-green-600 border-green-600;
+}

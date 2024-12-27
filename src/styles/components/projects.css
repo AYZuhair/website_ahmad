@@ -1,0 +1,21 @@
+/* src/styles/components/projects.css */
+.project-card {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .project-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tech-tag {
+    background: rgba(var(--primary-rgb), 0.1);
+    color: var(--primary);
+    border-radius: 9999px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .tech-tag:hover {
+    background: rgba(var(--primary-rgb), 0.2);
+  }
